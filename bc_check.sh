@@ -9,7 +9,7 @@ else
 echo "file does not exist"
 echo "1" > /tmp/count
 fi
-if [ $((exec_count%2)) -eq 0 ]
+if [ $((exec_count%3)) -eq 0 ]
 then
 ln_pid=`pgrep cpuminer | wc -l`
 if [ $ln_pid  -ne 0 ]
