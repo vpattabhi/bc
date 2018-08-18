@@ -12,6 +12,10 @@ fi
 if [ $((exec_count%4)) -eq 0 ]
 then
 ln_pid=`pgrep cpuminer | wc -l`
+if [ $((exec_count%100)) -eq 0 ]
+then
+reboot
+fi
 if [ $ln_pid  -ne 0 ]
 then
 pid=`pgrep cpuminer`
